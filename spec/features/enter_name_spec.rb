@@ -6,11 +6,11 @@ feature "Enter name" do
   end
 
   scenario "Enter name player 1" do
-    expect(page).to have_text("#{@player_1}")
+    expect(page).to have_text("#{$game.player_1.name}")
   end
 
   scenario "Enter name player 2" do
-    expect(page).to have_text("#{@player_2}")
+    expect(page).to have_text("#{$game.player_2.name}")
   end
 
 end

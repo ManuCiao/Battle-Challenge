@@ -21,7 +21,7 @@ body {
   width: 80%;
   margin: auto;
   height: auto;
-  text-shadow: 2px 2px #000;
+  text-shadow: 5px 5px #000;
   text-align: center;
 }
 .attack img {
@@ -35,9 +35,9 @@ body {
 </style>
 
 <div class="container">
-    <p class="attack"><%= @player_1 %> attacked <%= @player_2 %></p>
+    <p class="attack"><%= @game.player_1.name %> attacked <%= @game.player_2.name %></p>
     <br><br>
-    <p><%= @player_2 %>: <%= $player_2.hit_points %> points</p>
+    <p><%= @game.player_2.name %>: <%= @game.player_2.hit_points %> points</p>
     <br><br><br>
     <img src="http://vignette2.wikia.nocookie.net/p__/images/6/6b/Yosuke_sprite.png/revision/latest?cb=20130626212724&path-prefix=protagonist">
 </div>
