@@ -89,6 +89,9 @@ body {
   padding: 20px;
   float: left;
 }
+.turn{
+  text-align: center;
+}
 
 </style>
 
@@ -108,5 +111,8 @@ body {
     <%= $game.player_2.name %>
     <p class="hitpoints">HP: <%= $game.player_2.hit_points %> points</p>
     <img src="http://i.imgur.com/RvAat.gif">
+  </div>
+  <div>
+    <p class="turn"><%= $game.switch_player.name %> turn to play</p>
   </div>
 </div>

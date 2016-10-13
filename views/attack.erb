@@ -35,9 +35,12 @@ body {
 </style>
 
 <div class="container">
-    <p class="attack"><%= @game.player_1.name %> attacked <%= @game.player_2.name %></p>
-    <br><br>
-    <p><%= @game.player_2.name %>: <%= @game.player_2.hit_points %> points</p>
-    <br><br><br>
-    <img src="http://vignette2.wikia.nocookie.net/p__/images/6/6b/Yosuke_sprite.png/revision/latest?cb=20130626212724&path-prefix=protagonist">
+  <p class="attack"><%= @game.player_1.name %> attacked <%= @game.player_2.name %></p>
+  <br><br>
+  <p><%= @game.player_2.name %>: <%= @game.player_2.hit_points %> points</p>
+  <br><br><br>
+  <img src="http://vignette2.wikia.nocookie.net/p__/images/6/6b/Yosuke_sprite.png/revision/latest?cb=20130626212724&path-prefix=protagonist">
+  <div>
+    <p class="turn"><%= $game.switch_player.name %> turn to play</p>
+  </div>
 </div>
