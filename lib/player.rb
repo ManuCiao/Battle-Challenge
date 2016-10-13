@@ -10,10 +10,6 @@ attr_reader :name, :hit_points
     @hit_points = hit_points
   end
 
-  def attack(player)
-    player.hit
-  end
-
   def hit
     @hit_points -= HIT_POINTS
   end
