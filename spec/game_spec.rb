@@ -2,8 +2,10 @@ require 'game'
 
 describe Game do
   subject(:game) { described_class.new(player_1, player_2) }
+  subject(:finished_game) { described_class.new(player_1, loser_player) }
   let(:player_1) { double :player_1 }
   let(:player_2) { double :player_2 }
+  let(:loser_player) { double(:loser_player, hit_points: 0) }
 
   describe '#player_1' do
     it "returns the name of the first player" do
@@ -38,6 +40,19 @@ describe Game do
   describe '#target' do
     it "returns the last of the array" do
       expect(game.target).to eq(player_2)
+    end
+  end
+
+  describe '#loser' do
+    it 'returns the loser if hit points are 0' do
+      finished_game.target
+      expect(finished_game.loser).to eq(loser_player)
+    end
+
+    it 'does not return the loser if hit points are more than 0' do
+      allow(player_2).to receive(:hit_points).and_return(100)
+      game.target
+      expect(game.loser).to_not eq(player_2)
     end
   end
 end

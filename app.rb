@@ -21,9 +21,9 @@ enable :sessions
     erb (:play)
   end
 
-  post '/reduce_hp' do
+  post '/attack_outcome' do
     $game.attack($game.target)
-    redirect '/attack'
+    $game.loser ? (redirect '/game_over') : (redirect '/attack') 
   end
 
   get '/attack' do
@@ -33,6 +33,10 @@ enable :sessions
   post '/switch' do
     $game.switch_turn
     redirect '/play'
+  end
+
+  get '/game_over' do
+    erb :game_over
   end
 
   # start the server if ruby file executed directly

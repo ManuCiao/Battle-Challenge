@@ -2,6 +2,8 @@ require_relative 'player'
 
 class Game
 
+  DEATH_POINTS = 0
+
   def initialize(player_1, player_2)
     @players = [player_1, player_2]
     @switch_player = player_2
@@ -24,11 +26,15 @@ class Game
   end
 
   def target
-    @players.last
+    @target = @players.last
   end
 
   def switch_turn
     @players.reverse!
+  end
+
+  def loser
+    @target if @target.hit_points == 0
   end
 
 end
