@@ -7,7 +7,6 @@ class Battle < Sinatra::Base
 enable :sessions
 
   get '/' do
-    'Hello Battle!'
     erb(:index)
   end
 
@@ -16,19 +15,24 @@ enable :sessions
     player_2 = Player.new(params[:player_2])
     $game = Game.new(player_1, player_2)
     redirect '/play'
-
   end
 
   get '/play' do
-    @game = $game
     erb (:play)
   end
 
+  post '/reduce_hp' do
+    $game.attack($game.target)
+    redirect '/attack'
+  end
+
   get '/attack' do
-    @game = $game
-    @game.attack(@game.switch_player)
-    @game.switch_turn
     erb (:attack)
+  end
+
+  post '/switch' do
+    $game.switch_turn
+    redirect '/play'
   end
 
   # start the server if ruby file executed directly

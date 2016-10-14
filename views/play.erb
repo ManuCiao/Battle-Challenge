@@ -44,7 +44,7 @@ body {
 }
 
 
-.action a {
+form button {
   margin: auto;
   display: block;
   background: #f01313;
@@ -68,7 +68,7 @@ body {
   text-decoration: none;
 }
 
-.action a:hover {
+form button:hover {
   background: #4f0707;
   background-image: -webkit-linear-gradient(top, #4f0707, #f01313);
   background-image: -moz-linear-gradient(top, #4f0707, #f01313);
@@ -79,7 +79,7 @@ body {
 }
 
 
-.action a {
+form button {
   margin-top: 100px;
   width: auto;
   height: auto;
@@ -103,9 +103,9 @@ body {
   </div>
   <div class="middle">
     vs
-    <div class="action">
-      <a href="/attack">Attack</a>
-    </div>
+    <form name="input" action="/reduce_hp" method="post">
+      <button class="submit" type="submit" value="Attack">Attack</button>
+    </form>
   </div>
   <div class="right">
     <%= $game.player_2.name %>
@@ -113,6 +113,6 @@ body {
     <img src="http://i.imgur.com/RvAat.gif">
   </div>
   <div>
-    <p class="turn"><%= $game.switch_player.name %> turn to play</p>
+    <p class="turn"><%= $game.current_turn.name %> turn to play</p>
   </div>
 </div>

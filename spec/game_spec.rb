@@ -20,7 +20,24 @@ describe Game do
   describe '#switch_player' do
     it "returns player 1 switched turn with player 2" do
       game.switch_turn
-      expect(game.switch_player).to eq(player_1)
+      expect(game.current_turn).to eq(player_2)
+    end
+
+    it "switches the target of the array" do
+      game.switch_turn
+      expect(game.target).to eq(player_1)
+    end
+  end
+
+  describe '#current_turn' do
+    it "returns the first of the array" do
+      expect(game.current_turn).to eq(player_1)
+    end
+  end
+
+  describe '#target' do
+    it "returns the last of the array" do
+      expect(game.target).to eq(player_2)
     end
   end
 end
