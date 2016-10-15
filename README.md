@@ -41,6 +41,26 @@ So I can Lose a game of Battle,
 I want to see a 'Lose' message if I reach 0HP first
 ```
 
+Concepts and skills for the week
+--------------------------------
+
+*Concepts
+---------
+* The relationship between a client and a server.
+* How HTTP encodes information sent over the web.
+* RESTful APIs.
+* The request/response cycle.
+* Web templating with HTML/CSS.
+
+*Skills
+-------
+* Debugging programs that use multiple languages.
+* Using a framework (Sinatra) in your code.
+* Structuring the code for apps that have user interaction and visual output.
+* Testing apps that have user interaction and visual output.
+* Tracing data between the browser and server.
+
+
 Improvements
 ------------
 Add more functionality, implement clean css and html files. 
