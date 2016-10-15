@@ -1,11 +1,16 @@
 require 'game'
 
 describe Game do
-  subject(:game) { described_class.new(player_1, player_2) }
+  subject(:game) { Game.start(player_1, player_2) }
   subject(:finished_game) { described_class.new(player_1, loser_player) }
   let(:player_1) { double :player_1 }
   let(:player_2) { double :player_2 }
   let(:loser_player) { double(:loser_player, hit_points: 0) }
+
+
+  it "create an instance of itself" do
+    expect(Game.start(player_1, player_2)).to be_an_instance_of(Game)
+  end
 
   describe '#player_1' do
     it "returns the name of the first player" do
