@@ -44,7 +44,7 @@ I want to see a 'Lose' message if I reach 0HP first
 Concepts and skills for the week
 --------------------------------
 
-*Concepts
+*Concepts*
 ---------
 * The relationship between a client and a server.
 * How HTTP encodes information sent over the web.
@@ -52,7 +52,7 @@ Concepts and skills for the week
 * The request/response cycle.
 * Web templating with HTML/CSS.
 
-*Skills
+*Skills*
 -------
 * Debugging programs that use multiple languages.
 * Using a framework (Sinatra) in your code.
@@ -63,6 +63,6 @@ Concepts and skills for the week
 
 Improvements
 ------------
-Add more functionality, implement clean css and html files. 
-The players' hit points cannot go below 0.
-Fix the game_spec.rb
+* Add more functionality, implement clean css and html files. 
+* The players' hit points cannot go below 0.
+* Fix the game_spec.rb
